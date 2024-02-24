@@ -1,0 +1,20 @@
+<div  class="header-container">
+    <!--Red Bar-->
+    <div class="top-bar-black">
+        <div class="box">
+            <img  class="logo"  src="{{logoUrl}}"   />
+        </div>
+    </div>
+    <!--Black Bar-->
+    <div  class="top-bar-red">
+        <div class="box">
+            <input 
+                   type="text" 
+                   (keyup.enter)="onSearchEvent(inputTitle.value)" 
+                   class="search-input" 
+                   placeholder="Title" 
+                   #inputTitle
+            />
+        </div>
+    </div>
+</div>

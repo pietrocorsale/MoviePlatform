@@ -1,0 +1,64 @@
+$color-background: black;
+$copyright-color: #FFFFFF;
+$copyright-font-family: 'Roboto';
+
+.footer-container {
+    position: relative;
+    background-color: $color-background;
+    bottom: 0%;
+    height:inherit;
+    width: 100%;
+    padding:0%;
+}
+.link-box {
+    position: absolute;
+    top: 50.125%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // top: 18.28%;
+    display: flex;
+    height: 17.25%;
+    width: 18.75%;
+}
+.logo{
+    position: absolute;
+    top: 14.73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    aspect-ratio: 206.47/38;
+    height:auto;
+    width: 14.33%;
+}
+.copyright{
+    position: absolute;
+    display: block;
+    bottom: 9.99%;
+    left: 39.5%;
+    height: 6.25%;
+    width: 22.5%;
+    color: $copyright-color;
+    font-family: $copyright-font-family;
+    font-size : 0.83vw;
+    font-weight: 400;
+    letter-spacing:0.024vw;
+    margin: 0%;
+}
+.link {
+    height: 100%;
+    width:auto;
+}
+.appStore{
+    display: block;
+    top: 0%;
+    aspect-ratio: 128.86/38.66;
+    width: 100%;
+    height: auto;
+}
+.googlePlay {
+    display: block;
+    margin-left: 5.15%;
+    aspect-ratio: 128.86/38.66;
+    width: 100%;
+    height: auto;
+}

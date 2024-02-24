@@ -1,0 +1,41 @@
+<div class="pagination-container">
+  <nav aria-label="pagination" class="nav">
+    <ul>
+      <!--Button for previous page-->
+      <li *ngIf="total != 0" class="first">
+        <button class="button-pre-nex"
+          aria-label="Go To Previous Page"
+          [attr.aria-disabled]="current === 1"
+          [disabled]="current === 1"
+          (click)="onPrevious()"
+        >
+          <img src="{{iconPrevious}}" class="prev-next" />
+        </button>
+      </li>
+      <!--Button for a specific page-->
+      <li class="page-link" *ngFor="let page of pages;">
+        <a class="circle-link" 
+          [attr.aria-current]="page === current ? 'page' : null"
+          [attr.aria-label]="page === current ? 'Current Page, Page ' + page : 'Go to Page ' + page"
+          [class.current]="page === current"
+          tabindex="0"
+          (click)="onGoTo(page)"
+          (keyup.enter)="onGoTo(page)"
+          >
+            <span>{{ page }}</span> 
+        </a>
+      </li>
+      <!--Button for next page-->
+      <li *ngIf="total != 0">
+        <button class="button-pre-nex"
+          aria-label="Go To Next Page"
+          [attr.aria-disabled]="current === total"
+          [disabled]="current === total"
+          (click)="onNext()"
+        >
+          <img src="{{iconNext}}" class="prev-next" />
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>

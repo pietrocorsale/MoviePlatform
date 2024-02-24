@@ -1,0 +1,46 @@
+<div class="main-container">
+    <!--Header-->
+        <div class="header">
+                <app-header
+                (titleToSearch)="filterByTtle($event)"
+                style="width:100%;height: 100%;"
+                ></app-header>
+        </div>
+    <!--Title-->
+        <div class="title-box">
+            <p class="title">Popular Movies</p>
+        </div>
+    <!--Content area with movies-->
+        <div class="movies-area">
+            <p class="no-results" *ngIf="movieFiltered == null || movieFiltered.length == 0">No Result</p>
+            <div class="movies-box"  [ngStyle]="styleObject(i)" *ngFor="let item of itemsToDisplay
+            let i = index" >
+                <app-card class="movie"
+                          [title] = "item.title" 
+                          [url] = "item.images.posterArt.url"
+                          [description] = "item.description"
+                          [releaseYear] = "item.releaseYear"
+                          >
+                </app-card>
+            </div>
+        </div>
+    <!--Pagination buttons-->
+        <div class="pagination-area">
+            <div class="pagination-box" >
+                <app-pagination
+                  style="width:100%;height: 100%;"
+                  [current]="current"
+                  [total]="total"
+                  (goTo)="onGoTo($event)"
+                  (next)="onNext($event)"
+                 (previous)="onPrevious($event)"
+                ></app-pagination>
+            </div>
+        </div>
+    <!--Footer-->
+        <div class="footer">
+                <app-footer
+                style="height: 100%;"
+                ></app-footer>
+        </div>      
+</div>

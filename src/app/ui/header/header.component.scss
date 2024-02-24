@@ -1,0 +1,75 @@
+$url-search-icon : '../../../assets/search.png';
+$color-bar-up: black;
+$color-bar-down:#C42521;
+$background-search-input : white;
+$font-family-placeholder: 'Roboto';
+$font-weight-placeholder: 400;
+$font-size-placeholder : 0.97vw;
+$font-style-placeholder: normal;
+$color-placeholder: #676767;
+
+
+.header-container{
+    width: inherit;
+    height: inherit;
+    padding:0%;
+}
+.top-bar-black{
+    position: relative;
+    background-color: $color-bar-up;
+    height:47.61%;
+    width: 100%;
+    margin:0%;
+    margin-top: auto!important;
+    margin-bottom: auto!important; 
+}
+.top-bar-red {
+    position: relative;
+    background-color: $color-bar-down;
+    height:52.38%;
+    width: 100%;
+}
+.box{
+    display: flex;
+    padding: 0%;
+    height:100%;
+    margin:0%;
+}
+.logo{
+    aspect-ratio: 249.93/46;
+    margin-left:9.44%;
+    margin-top: auto!important;
+    margin-bottom: auto!important;
+    margin-right: 0%;
+    padding:0%;
+    width:auto;
+    height:76.66%;
+}
+.search-input {
+    display: flex;
+    width: 81.11%;
+    height: 57.57%;
+    margin-left:9.44%;
+    margin-top: auto!important;
+    margin-bottom: auto!important;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    background: url($url-search-icon) no-repeat scroll 2% 50%;
+    background-size:   auto 63.1578947368% ;
+    background-color: $background-search-input;
+    font-size:  $font-size-placeholder;
+    border-radius:5.58px;
+    border-style: none;
+    outline: none;
+    padding-left:3.80%;
+}
+.search-input::placeholder {
+    vertical-align:center;
+    // top:35%;
+    font-family: $font-family-placeholder;
+    font-weight: $font-weight-placeholder;
+    font-size : $font-size-placeholder;
+    font-style: $font-style-placeholder;
+    color: $color-placeholder;
+    letter-spacing:0.028vw;
+}
